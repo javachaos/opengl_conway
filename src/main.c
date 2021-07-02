@@ -5,36 +5,39 @@
 #include <../include/binary_matrix.h>
 
 static volatile int keepRunning = 1;
-
+static BinaryMatrix *M;
 void intHandler(int dummy)
 {
 	keepRunning = 0;
 }
 
+void render() {
+	int i, j, k;
+	for (i = 0; i < M->num_rows; i++)
+	{
+		for (j = 0; j < M->num_cols; j++)
+		{
+            glBegin(GL_POINTS);
+            if (CheckEntry(M,i,j)) {
+                glColor3f(1,1,1);
+                glVertex2i(i,j);
 
-void update(BinaryMatrix *M) {
-    struct timespec sleeptime;
-	sleeptime.tv_sec = 0;
-	sleeptime.tv_nsec = 50000000;
+            } else {
+                glColor3f(0,0,0);
+                glVertex2i(i,j);
+            }
+            glEnd();
+		}
+	}
+    glutSwapBuffers();
+}
 
+void update() {
 
 	int x, y, z = 0;
-
 	int width = M->num_cols - 1;
 	int height = M->num_rows - 1;
 
-	//Initialize the matrix randomly.
-	for (x = 0; x < width; x++)
-	{
-		for (y = 0; y < height; y++)
-		{
-			int v = (rand() % 100) > 90 ? 1 : 0;
-			if (v)
-			{
-				UpdateEntry(M, y, x, v);
-			}
-		}
-	}
 	int n = 0;//number of mutations per iteration
 		for (x = 0; x < height; x++)
 		{
@@ -51,6 +54,7 @@ void update(BinaryMatrix *M) {
 				k += CheckEntry(M, x + 1, y + 1);
 				if (CheckEntry(M, x, y))
 				{
+ 
 					if (k < 2 || k > 3)
 					{
 						UpdateEntry(M, x, y, 0);
@@ -79,37 +83,37 @@ void update(BinaryMatrix *M) {
 		{
 	        return;
 		}
+        render(M);
 }
 
-void render(BinaryMatrix *M) {
-	int i, j, k;
-	for (i = 0; i < M->num_rows; i++)
+void init() {
+
+	int x, y, z = 0;
+	int width = M->num_cols - 1;
+	int height = M->num_rows - 1;
+    //Initialize the matrix randomly.
+	for (x = 0; x < width; x++)
 	{
-		for (j = 0; j < M->num_cols; j++)
+		for (y = 0; y < height; y++)
 		{
-			int x = test(M->data, i * M->num_cols + j);
-			if (x)
+			int v = (rand() % 100) > 95 ? 1 : 0;
+			if (v)
 			{
-                glColor3f(1,1,1);
-                glVertex2i(i,j);
-			} else {
-                glColor3f(0,0,0);
-                glVertex2i(i,j);
-            }
+				UpdateEntry(M, y, x, v);
+			}
 		}
 	}
 }
 
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[]) {
 
-    BinaryMatrix *M = ConstructBinaryMatrix(500, 500);
 	signal(SIGINT, intHandler);
+    M = ConstructBinaryMatrix(500,500);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 
     glutInitWindowPosition(80, 80);
     glutInitWindowSize(500,500);
-
     glutCreateWindow("A Simple OpenGL Program");
 
     glClear(GL_COLOR_BUFFER_BIT);
@@ -117,12 +121,13 @@ int main(int argc, char* argv[]){
     glLoadIdentity();
     gluOrtho2D( 0.0, 500.0, 500.0,0.0 );
 
-    glBegin(GL_POINTS);
+    init();
+    struct timespec sleeptime;
+	sleeptime.tv_sec = 0;
+	sleeptime.tv_nsec = 50000000;
+    glutDisplayFunc(render);
     while (keepRunning) {
-        update(M);
-        render(M);
+        update();
     }
-    
 	DeleteBinaryMatrix(M);
-    glEnd();
 }
