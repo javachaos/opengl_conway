@@ -4,7 +4,9 @@ extraction:
         packages:
           - freeglut3-dev
           - gcc-9
+          - make
      configure:
      index:
         build_command:
+          cd src
         - make
