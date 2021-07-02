@@ -1,4 +1,3 @@
-LGTM_SRC=./src/
 extraction:
   cpp:
      prepare:
