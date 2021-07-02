@@ -87,7 +87,8 @@ void update() {
 }
 
 void init() {
-
+    time_t t;
+    srand((unsigned) time(&t));
 	int x, y, z = 0;
 	int width = M->num_cols - 1;
 	int height = M->num_rows - 1;
@@ -96,7 +97,7 @@ void init() {
 	{
 		for (y = 0; y < height; y++)
 		{
-			int v = (rand() % 100) > 95 ? 1 : 0;
+			int v = (rand() % 100) > 97 ? 1 : 0;
 			if (v)
 			{
 				UpdateEntry(M, y, x, v);
@@ -114,7 +115,7 @@ int main(int argc, char* argv[]) {
 
     glutInitWindowPosition(80, 80);
     glutInitWindowSize(500,500);
-    glutCreateWindow("A Simple OpenGL Program");
+    glutCreateWindow("Conway's game of life.");
 
     glClear(GL_COLOR_BUFFER_BIT);
     glMatrixMode( GL_PROJECTION );
