@@ -7,7 +7,7 @@ extraction:
           - gcc-9
           - make
      configure:
-         command:            
+         command: 
      index:
         build_command:
         - cd src
