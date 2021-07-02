@@ -1,0 +1,10 @@
+extraction:
+  cpp:
+     prepare:
+        packages:
+          - freeglut3-dev
+          - gcc-9
+     configure:
+     index:
+        build_command:
+        - make
