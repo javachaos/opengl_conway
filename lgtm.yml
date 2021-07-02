@@ -1,3 +1,4 @@
+LGTM_SRC=./src/
 extraction:
   cpp:
      prepare:
@@ -6,6 +7,7 @@ extraction:
           - gcc-9
           - make
      configure:
+         command:            
      index:
         build_command:
         - cd src
