@@ -109,26 +109,27 @@ void init() {
 int main(int argc, char* argv[]) {
 
 	signal(SIGINT, intHandler);
-    M = ConstructBinaryMatrix(500,500);
+    M = ConstructBinaryMatrix(800,600);
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 
     glutInitWindowPosition(80, 80);
-    glutInitWindowSize(500,500);
+    glutInitWindowSize(800,600);
     glutCreateWindow("Conway's game of life.");
 
     glClear(GL_COLOR_BUFFER_BIT);
     glMatrixMode( GL_PROJECTION );
     glLoadIdentity();
-    gluOrtho2D( 0.0, 500.0, 500.0,0.0 );
+    gluOrtho2D( 0.0, 800.0, 600.0,0.0 );
 
     init();
     struct timespec sleeptime;
 	sleeptime.tv_sec = 0;
-	sleeptime.tv_nsec = 50000000;
+	sleeptime.tv_nsec = 5000000;
     glutDisplayFunc(render);
     while (keepRunning) {
         update();
+        nanosleep(&sleeptime, NULL);
     }
 	DeleteBinaryMatrix(M);
 }
