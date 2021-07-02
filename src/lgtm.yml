@@ -8,5 +8,5 @@ extraction:
      configure:
      index:
         build_command:
-          cd src
+        - cd src
         - make
