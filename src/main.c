@@ -75,8 +75,11 @@ void update() {
 	int height = MATRIX->num_rows - 1;
 
 	int n = 0;//number of mutations per iteration
+	    
+	#pragma omp parallel for
 		for (x = 0; x < height; x++)
 		{
+	#pragma omp parallel for
 			for (y = 0; y < width; y++)
 			{
 				int k = 0;
@@ -123,6 +126,11 @@ void update() {
 }
 
 void init() {
+    glClear(GL_COLOR_BUFFER_BIT);
+    glMatrixMode( GL_PROJECTION );
+    glLoadIdentity();
+    gluOrtho2D( 0.0, 800.0, 600.0,0.0 );
+
     time_t t;
     srand((unsigned) time(&t));
 	int x, y, z = 0;
@@ -153,17 +161,12 @@ int main(int argc, char* argv[]) {
     glutInitWindowSize(800,600);
     glutCreateWindow("Conway's game of life.");
 
-    glClear(GL_COLOR_BUFFER_BIT);
-    glMatrixMode( GL_PROJECTION );
-    glLoadIdentity();
-    gluOrtho2D( 0.0, 800.0, 600.0,0.0 );
-
     struct timespec sleeptime;
 	sleeptime.tv_sec = 0;
 	sleeptime.tv_nsec = 5000000;
+	glutDisplayFunc(render);
 	if (argc == 1) {
         init();
-		glutDisplayFunc(render);
 		while (keepRunning) {
 			update();
 			nanosleep(&sleeptime, NULL);
@@ -174,13 +177,11 @@ int main(int argc, char* argv[]) {
 			int w = atoi(argv[3]);
 			int h = atoi(argv[4]);
 			drawRect(x, y, w, h);
-		    glutDisplayFunc(render);
 			render();
 			while (keepRunning) {
 				nanosleep(&sleeptime, NULL);
 			}
 	} else {
-		glutDisplayFunc(render);
 		drawGasket(0, 0, 600);
 		render();
 		while (keepRunning) {

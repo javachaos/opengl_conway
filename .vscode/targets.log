@@ -1,267 +1,267 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
- 
-# GNU Make 4.2.1
+# GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  2 05:05:24 2021
+# Make data base, printed on Sat Jul  3 18:56:05 2021
 
 # Variables
 
-# 'override' directive
-GNUMAKEFLAGS := 
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# automatic
-?F = $(notdir $?)
 # environment
-DESKTOP_SESSION = ubuntu
+JAVA_HOME = /snap/openjdk/current/jdk
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f6713750-049f-4f7e-a04d-c0532ffb73da.sock
+# environment
+VSCODE_CWD = /home/fred
 # default
-.SHELLFLAGS := -c
+MAKE_COMMAND := make
 # environment
-XDG_SESSION_CLASS = user
-# environment
-SNAP_COMMON = /var/snap/code/common
-# environment
-XDG_SESSION_TYPE = x11
-# environment
-VSCODE_LOG_NATIVE = false
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
-# environment
-IM_CONFIG_PHASE = 1
+QT_ACCESSIBILITY = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-XAUTHORITY = /run/user/1000/gdm/Xauthority
-# environment
-GDMSESSION = ubuntu
-# environment
-XMODIFIERS = @im=ibus
-# makefile
-CURDIR := /home/fred/Dev/opengl_conway
-# makefile
-SHELL = /bin/sh
-# environment
-SNAP_DATA = /var/snap/code/67
-# environment
-VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
-# environment
-JOURNAL_STREAM = 8:50696
-# environment
-XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
-# environment
 SNAP_INSTANCE_NAME = code
 # environment
-SNAP_ARCH = amd64
+GDK_PIXBUF_MODULEDIR = /snap/code/67/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/fred/Dev/opengl_conway
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/home/fred/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.ZUL350
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/fred/Dev/opengl_conway
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+WAYLAND_DISPLAY = wayland-0
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d&iid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d&sid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d","uploadToServer":true}
+# environment
+XDG_SESSION_DESKTOP = ubuntu
 # makefile
 MAKEFILE_LIST := 
 # environment
-JAVA_HOME = /snap/openjdk/current/jdk
+SNAP_REEXEC = 
 # automatic
 @F = $(notdir $@)
 # environment
-GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
-# environment
-USERNAME = fred
-# environment
-XDG_DATA_DIRS = /usr/share/ubuntu:/home/fred/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
-# environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/67/usr/share/code/code
+VSCODE_PID = 13794
 # environment
-MANAGERPID = 1707
+XDG_SESSION_TYPE = wayland
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
 # environment
-LESSOPEN = | /usr/bin/lesspipe %s
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-VSCODE_CWD = /home/fred
+SESSION_MANAGER = local/fred-desktop:@/tmp/.ICE-unix/3329,unix/fred-desktop:/tmp/.ICE-unix/3329
+# automatic
+*F = $(notdir $*)
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/67/usr/share/glib-2.0/schemas
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+BREAKPAD_DUMP_LOCATION = /home/fred/.config/Code/exthost Crash Reports
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/fred/.local/bin:/home/fred/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/openjdk/current/jdk/bin:/snap/openjdk/current/jdk/bin
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
 # environment
-GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+XMODIFIERS = @im=ibus
 # environment
-SESSION_MANAGER = local/fred-desktop:@/tmp/.ICE-unix/1932,unix/fred-desktop:/tmp/.ICE-unix/1932
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# environment
+IM_CONFIG_CHECK_ENV = 1
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+SNAP_COOKIE = eQdEy5TwV4mWXr3IX5uoIjHbqYXC60Vbtw8A5yllCp3jyO1TNAOB
+# environment
+PATH = /home/fred/.local/bin:/home/fred/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/snap/openjdk/current/jdk/bin:/snap/openjdk/current/jdk/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_CA:en
+# automatic
+^F = $(notdir $^)
+# environment
+SNAP_USER_COMMON = /home/fred/snap/code/common
+# environment
+SNAP = /snap/code/67
+# environment
+INVOCATION_ID = eb4821ff04614f1eaf65196cde448aec
+# environment
+SNAP_REVISION = 67
+# environment
+SNAP_REAL_HOME = /home/fred
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = fred
+# environment
+GNOME_SETUP_DISPLAY = :1
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = fred
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+SNAP_ARCH = amd64
+# makefile
+.DEFAULT_GOAL := 
+# environment
+DISPLAY = :0
+# environment
+USER = fred
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+DISABLE_WAYLAND = 1
+# environment
+SNAP_DATA = /var/snap/code/67
+# environment
+SNAP_CONTEXT = eQdEy5TwV4mWXr3IX5uoIjHbqYXC60Vbtw8A5yllCp3jyO1TNAOB
+# environment
+MANAGERPID = 3171
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 13750
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = /home/fred/.config/Code/CachedData/507ce72a4466fbb27b715c3722558bb15afa9f48
+# environment
+_ = /snap/code/67/usr/share/code/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/fred/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/67
+JOURNAL_STREAM = 8:30136
 # environment
-SNAP_VERSION = 507ce72a
-# environment
-XDG_MENU_PREFIX = gnome-
-# environment
-VSCODE_LOG_STACK = false
-# environment
-DISABLE_WAYLAND = 1
-# environment
-VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d&iid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d&sid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d","uploadToServer":true}
-# environment
-INVOCATION_ID = fb5630cda9ad48b1b0a208d77c06646f
-# environment
-GDK_PIXBUF_MODULEDIR = /snap/code/67/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
-# default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
-# environment
-LS_COLORS = 
-# environment
-XDG_SESSION_DESKTOP = ubuntu
-# environment
-SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 82624
-# automatic
-%F = $(notdir $%)
-# environment
-DISPLAY = :1
-# environment
-VSCODE_PIPE_LOGGING = true
-# environment
-SNAP_INSTANCE_KEY = 
-# environment
-PWD = /home/fred/Dev/opengl_conway
-# default
-.LOADED := 
-# environment
-SSH_AGENT_PID = 1894
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
-# environment
-GTK_MODULES = gail:atk-bridge
+XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
 HOME = /home/fred
 # environment
-LESSCLOSE = /usr/bin/lesspipe %s %s
-# environment
-VSCODE_CLI = 1
-# environment
-LOGNAME = fred
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# environment
-SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
-# environment
-SNAP_CONTEXT = eQdEy5TwV4mWXr3IX5uoIjHbqYXC60Vbtw8A5yllCp3jyO1TNAOB
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-SNAP_USER_COMMON = /home/fred/snap/code/common
-# environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
-# automatic
-^D = $(patsubst %/,%,$(dir $^))
-# environment
-MAKELEVEL := 0
-# environment
-SNAP_REAL_HOME = /home/fred
-# default
-MAKE = $(MAKE_COMMAND)
-# default
-MAKECMDGOALS := all
-# environment
 QT_IM_MODULE = ibus
-# environment
-SNAP_USER_DATA = /home/fred/snap/code/67
-# environment
-SHLVL = 0
-# environment
-GNOME_SHELL_SESSION_MODE = ubuntu
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-dfe29544-ef78-4341-9a48-2ef4290fd571.sock
-# default
-MAKE_VERSION := 4.2.1
-# environment
-USER = fred
-# environment
-SNAP_REVISION = 67
-# makefile
-.DEFAULT_GOAL := 
-# environment
-XDG_CURRENT_DESKTOP = Unity
-# automatic
-%D = $(patsubst %/,%,$(dir $%))
-# default
-MAKE_COMMAND := make
-# environment
-VSCODE_NODE_CACHED_DATA_DIR = /home/fred/.config/Code/CachedData/507ce72a4466fbb27b715c3722558bb15afa9f48
-# default
-.VARIABLES := 
-# automatic
-*F = $(notdir $*)
-# environment
-LANGUAGE = en_CA:en
-# environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-b63e381a-1.57.1-main.sock
-# environment
-BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
-# makefile
-MAKEFLAGS = pqrR
-# environment
-MFLAGS = -pqrR
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
-# environment
-BREAKPAD_DUMP_LOCATION = /home/fred/.config/Code/exthost Crash Reports
-# automatic
-+D = $(patsubst %/,%,$(dir $+))
-# environment
-GDK_BACKEND = x11
-# automatic
-+F = $(notdir $+)
-# environment
-QT_ACCESSIBILITY = 1
-# default
-MAKEFILES := 
-# environment
-SNAP_COOKIE = eQdEy5TwV4mWXr3IX5uoIjHbqYXC60Vbtw8A5yllCp3jyO1TNAOB
-# automatic
-<F = $(notdir $<)
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-b63e381a-1.57.1-main.sock
+# environment
 SNAP_NAME = code
 # environment
-LC_ALL = C
+GSETTINGS_SCHEMA_DIR = /snap/code/67/usr/share/glib-2.0/schemas
 # environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+IM_CONFIG_PHASE = 1
+# default
+.RECIPEPREFIX := 
 # automatic
-^F = $(notdir $^)
+<F = $(notdir $<)
+# environment
+SNAP_VERSION = 507ce72a
 # default
 SUFFIXES := 
 # environment
-SNAP_REEXEC = 
+VSCODE_CLI = 1
 # environment
-CHROME_DESKTOP = code-url-handler.desktop
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
-WINDOWPATH = 2
+SNAP_COMMON = /var/snap/code/common
 # default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-GJS_DEBUG_OUTPUT = stderr
-# default
-.RECIPEPREFIX := 
+SNAP_USER_DATA = /home/fred/snap/code/67
 # environment
-LANG = C
+XDG_MENU_PREFIX = gnome-
 # environment
-VSCODE_PID = 82667
+GDMSESSION = ubuntu
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=124/1024=12%, Rehash=0, Collisions=21/146=14%
+# Load=125/1024=12%, Rehash=0, Collisions=5/152=3%
 
 # Pattern-specific Variable Values
 
@@ -280,21 +280,7 @@ VSCODE_PID = 82667
 # Files
 
 # Not a target:
-all:
-#  Command line target.
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
-
-# Not a target:
 Makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
-
-# Not a target:
-makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -307,6 +293,20 @@ makefile:
 #  File has not been updated.
 
 # Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
 GNUmakefile:
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -314,7 +314,6 @@ GNUmakefile:
 #  Failed to be updated.
 
 # files hash-table stats:
- 
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
@@ -322,12 +321,15 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
+ 
+make: *** No rule to make target 'all'.  Stop.
+ 
 # strcache buffers: 1 (0) / strings = 17 / storage = 140 B / avg = 8 B
 # current buf: size = 8162 B / used = 140 B / count = 17 / avg = 8 B
 
 # strcache performance: lookups = 20 / hit rate = 15%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=1/20=5%
-# Finished Make data base on Fri Jul  2 05:05:24 2021
+# Load=17/8192=0%, Rehash=0, Collisions=0/20=0%
+# Finished Make data base on Sat Jul  3 18:56:05 2021
 
  
