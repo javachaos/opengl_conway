@@ -2,6 +2,7 @@ extraction:
   cpp:
      prepare:
         packages:
+          - libomp-dev
           - freeglut3-dev
           - gcc-9
           - make
@@ -9,6 +10,5 @@ extraction:
          command: 
      index:
         build_command:
-        - cd src
         - make clean
         - make
