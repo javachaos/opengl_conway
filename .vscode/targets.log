@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,16 +8,20 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul  3 18:56:05 2021
+# Make data base, printed on Mon Jul  5 05:04:22 2021
 
 # Variables
 
 # environment
 JAVA_HOME = /snap/openjdk/current/jdk
+# makefile (from 'Makefile', line 14)
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 # environment
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
+# makefile (from 'Makefile', line 7)
+SRC = ./src/
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
@@ -25,9 +31,11 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f6713750-049f-4f7e-a04d-c0532ffb73da.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2d90b6b2-7f9f-4099-b74a-3887f7ba2d49.sock
 # environment
 VSCODE_CWD = /home/fred
+# makefile (from 'Makefile', line 8)
+LIBS = -lm
 # default
 MAKE_COMMAND := make
 # environment
@@ -54,10 +62,12 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/home/fred/.local/share/flatpak/exports/share:
 VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
+# makefile (from 'Makefile', line 10)
+_DEPS = binary_matrix.h
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.ZUL350
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.RSG750
 # default
 .LOADED := 
 # default
@@ -86,12 +96,14 @@ WAYLAND_DISPLAY = wayland-0
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 5)
+ODIR = ./src/obj
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d&iid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d&sid=cf9627ce-9e78-47ef-ae1d-18ab60f2184d","uploadToServer":true}
 # environment
 XDG_SESSION_DESKTOP = ubuntu
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
 # environment
 SNAP_REEXEC = 
 # automatic
@@ -99,7 +111,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 13794
+VSCODE_PID = 3456
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -107,7 +119,7 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/fred-desktop:@/tmp/.ICE-unix/3329,unix/fred-desktop:/tmp/.ICE-unix/3329
+SESSION_MANAGER = local/fred-desktop:@/tmp/.ICE-unix/2260,unix/fred-desktop:/tmp/.ICE-unix/2260
 # automatic
 *F = $(notdir $*)
 # environment
@@ -118,6 +130,8 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 <D = $(patsubst %/,%,$(dir $<))
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile', line 1)
+IDIR = ./include
 # environment
 BREAKPAD_DUMP_LOCATION = /home/fred/.config/Code/exthost Crash Reports
 # default
@@ -141,7 +155,7 @@ IM_CONFIG_CHECK_ENV = 1
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-SNAP_COOKIE = eQdEy5TwV4mWXr3IX5uoIjHbqYXC60Vbtw8A5yllCp3jyO1TNAOB
+SNAP_COOKIE = Rp--MPbzB7MrtSv-cptc7qFRTzspYZ9Se5I5lQR_-Cn62LLTG70S
 # environment
 PATH = /home/fred/.local/bin:/home/fred/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/snap/openjdk/current/jdk/bin:/snap/openjdk/current/jdk/bin
 # default
@@ -155,7 +169,7 @@ SNAP_USER_COMMON = /home/fred/snap/code/common
 # environment
 SNAP = /snap/code/67
 # environment
-INVOCATION_ID = eb4821ff04614f1eaf65196cde448aec
+INVOCATION_ID = bc3eb47db892495c9462ff64ce401fa2
 # environment
 SNAP_REVISION = 67
 # environment
@@ -189,7 +203,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.deskto
 # environment
 SNAP_ARCH = amd64
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := gameoflife
 # environment
 DISPLAY = :0
 # environment
@@ -203,21 +217,23 @@ DISABLE_WAYLAND = 1
 # environment
 SNAP_DATA = /var/snap/code/67
 # environment
-SNAP_CONTEXT = eQdEy5TwV4mWXr3IX5uoIjHbqYXC60Vbtw8A5yllCp3jyO1TNAOB
+SNAP_CONTEXT = Rp--MPbzB7MrtSv-cptc7qFRTzspYZ9Se5I5lQR_-Cn62LLTG70S
 # environment
-MANAGERPID = 3171
+MANAGERPID = 2109
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 13750
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3413
 # environment
 VSCODE_NODE_CACHED_DATA_DIR = /home/fred/.config/Code/CachedData/507ce72a4466fbb27b715c3722558bb15afa9f48
 # environment
 _ = /snap/code/67/usr/share/code/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 3)
+CFLAGS = -I$(IDIR) -O3 -mrdrnd -lglut -lGLU -lGL -fopenmp
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/fred/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:30136
+JOURNAL_STREAM = 8:39135
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -240,20 +256,29 @@ IM_CONFIG_PHASE = 1
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
+# makefile (from 'Makefile', line 11)
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 # environment
 SNAP_VERSION = 507ce72a
 # default
 SUFFIXES := 
+# makefile (from 'Makefile', line 6)
+LDIR = ./lib
 # environment
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from 'Makefile', line 13)
+_OBJ = main.o binary_matrix.o
 # environment
 SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 2)
+CC = gcc
 # environment
 SNAP_USER_DATA = /home/fred/snap/code/67
+ 
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -261,7 +286,7 @@ GDMSESSION = ubuntu
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=125/1024=12%, Rehash=0, Collisions=5/152=3%
+# Load=136/1024=13%, Rehash=0, Collisions=9/174=5%
 
 # Pattern-specific Variable Values
 
@@ -269,22 +294,46 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 64768, inode 40636705): 9 files, no impossibilities.
+# . (device 64768, inode 40636705): 11 files, no impossibilities.
+# src/ (device 64768, inode 41026364): No files, no impossibilities so far.
 
-# 9 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
-# No implicit rules.
+src/obj/%.o: src//%.c include/binary_matrix.h
+#  recipe to execute (from 'Makefile', line 18):
+	$(CC) -c -o $@ $< $(CFLAGS)
 
+# 1 implicit rules, 0 (0.0%) terminal.
 # Files
+
+# Not a target:
+src/obj/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/obj/binary_matrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2021-07-03 20:09:09.765342875
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 26):
+	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
 
 # Not a target:
 .DEFAULT:
@@ -299,37 +348,32 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+.PHONY: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+gameoflife: src/obj/main.o src/obj/binary_matrix.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 21):
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=9/1024=1%, Rehash=0, Collisions=0/23=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
- 
-make: *** No rule to make target 'all'.  Stop.
- 
-# strcache buffers: 1 (0) / strings = 17 / storage = 140 B / avg = 8 B
-# current buf: size = 8162 B / used = 140 B / count = 17 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 235 B / avg = 9 B
+# current buf: size = 8162 B / used = 235 B / count = 24 / avg = 9 B
 
-# strcache performance: lookups = 20 / hit rate = 15%
+# strcache performance: lookups = 33 / hit rate = 27%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=0/20=0%
-# Finished Make data base on Sat Jul  3 18:56:05 2021
+# Load=24/8192=0%, Rehash=0, Collisions=0/33=0%
+# Finished Make data base on Mon Jul  5 05:04:22 2021
 
  
