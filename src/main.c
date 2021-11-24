@@ -5,6 +5,10 @@
 #include <math.h>
 #include <../include/binary_matrix.h>
 
+#define WIDTH 800
+#define HEIGHT 600
+#define COLOR 0
+
 static volatile int keepRunning = 1;
 BinaryMatrix *MATRIX;
 void intHandler(int dummy)
@@ -56,18 +60,27 @@ void drawGasket(int x, int y, int dimension)
 
 void render()
 {
+	
+	srand(time(NULL));
+	float r = drand48();
+	float g = drand48();		
+	float b = drand48();
 	struct timespec sleeptime;
 	sleeptime.tv_sec = 0;
 	sleeptime.tv_nsec = 5000000;
 	int i, j, k;
-	glBegin(GL_POINTS);
 	for (i = 0; i < MATRIX->num_rows; i++)
 	{
 		for (j = 0; j < MATRIX->num_cols; j++)
 		{
+	glBegin(GL_POINTS);
 			if (CheckEntry(MATRIX, i, j))
 			{
-				glColor3f(1, 1, 1);
+				if (COLOR) {
+				    glColor3f(r, g, b);
+				} else {
+				    glColor3f(1.0, 1.0, 1.0);
+				}
 				glVertex2i(i, j);
 			}
 			else
@@ -75,9 +88,9 @@ void render()
 				glColor3f(0, 0, 0);
 				glVertex2i(i, j);
 			}
+	glEnd();
 		}
 	}
-	glEnd();
 	glutSwapBuffers();
 
 	nanosleep(&sleeptime, NULL);
@@ -146,7 +159,7 @@ void init()
 	glClear(GL_COLOR_BUFFER_BIT);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluOrtho2D(0.0, 800.0, 600.0, 0.0);
+	gluOrtho2D(0.0, WIDTH * 1.0, HEIGHT * 1.0, 0.0);
 
 	time_t t;
 	srand((unsigned)time(&t));
@@ -171,12 +184,12 @@ int main(int argc, char *argv[])
 {
 
 	signal(SIGINT, intHandler);
-	MATRIX = ConstructBinaryMatrix(800, 600);
+	MATRIX = ConstructBinaryMatrix(WIDTH, HEIGHT);
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 
 	glutInitWindowPosition(80, 80);
-	glutInitWindowSize(800, 600);
+	glutInitWindowSize(WIDTH, HEIGHT);
 	glutCreateWindow("Conway's game of life.");
 
 	glutDisplayFunc(render);

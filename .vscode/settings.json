@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "binary_matrix.h": "c"
+        "binary_matrix.h": "c",
+        "basic.h": "c",
+        "err.h": "c"
     },
     "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools"
 }

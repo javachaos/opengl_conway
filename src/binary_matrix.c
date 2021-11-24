@@ -15,17 +15,19 @@ BinaryMatrix *ConstructBinaryMatrix(int rows, int cols)
 			{
 				printf("Array too large, failed to allocate memory.");
 				DeleteBinaryMatrix(b);
-				exit(-1);
+				return NULL;
 			}
 		}
 		return b;
 	}
 	else
 	{
-		printf("Error in CreateMatrix: number of rows and columns must be positive ending with a newline and exiting the program.");
-		exit(-1);
+		printf("Error in CreateMatrix: number of rows and columns must be positive, returning NULL.");
+		return NULL;
 	}
 }
+
+git user.name = fred user.email = alfred_e@outlook.com
 
 void DeleteBinaryMatrix(BinaryMatrix *M)
 {
@@ -48,15 +50,13 @@ void UpdateEntry(BinaryMatrix *M, int row, int col, int c)
 		else
 		{
 			printf(
-				"Error in UpdateEntry: content must be 0 or 1 ending with a newline and exiting the program.\n");
-			exit(-1);
+				"Error in UpdateEntry: content must be 0 or 1\n");
 		}
 	}
 	else
 	{
 		printf(
-			"Error in UpdateEntry: index out of bounds ending with a newline and exiting the program.\n");
-		exit(-1);
+			"Error in UpdateEntry: index out of bounds.\n");
 	}
 }
 
@@ -65,8 +65,7 @@ int IsMatrixIndex(BinaryMatrix *M, int row, int col)
 	if (M == NULL)
 	{
 		printf(
-			"IsMatrixIndex Error: NULL parameter passed ending with a newline and exiting program.\n");
-		exit(-1);
+			"IsMatrixIndex Error: NULL parameter passed.\n");
 	}
 	else
 	{
@@ -102,11 +101,11 @@ void PrintMatrix(BinaryMatrix *M)
 			int x = test(M->data, i * M->num_cols + j);
 			if (x)
 			{
-				putchar('#');
+				putchar('1');
 			}
 			else
 			{
-				putchar(' ');
+				putchar('0');
 			}
 		}
 	}

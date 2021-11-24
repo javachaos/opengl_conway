@@ -1,6 +1,5 @@
 /*
  * binary_matrix.h
- * Name / StudentID
  * An implementation of a Binary Matrix
  */
 #ifndef _BINARY_MATRIX_H_
