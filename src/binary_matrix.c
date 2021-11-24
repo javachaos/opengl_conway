@@ -13,7 +13,7 @@ BinaryMatrix *ConstructBinaryMatrix(int rows, int cols)
 			b->data = (int *)calloc(rows, (cols / BITS_PER_BYTE) + 1);
 			if (b->data == NULL)
 			{
-				printf("Array too large, failed to allocate memory.");
+				printf("Array too large, failed to allocate memory.\n");
 				DeleteBinaryMatrix(b);
 				return NULL;
 			}
@@ -22,12 +22,10 @@ BinaryMatrix *ConstructBinaryMatrix(int rows, int cols)
 	}
 	else
 	{
-		printf("Error in CreateMatrix: number of rows and columns must be positive, returning NULL.");
+		printf("Error in CreateMatrix: number of rows and columns must be positive, returning NULL.\n");
 		return NULL;
 	}
 }
-
-git user.name = fred user.email = alfred_e@outlook.com
 
 void DeleteBinaryMatrix(BinaryMatrix *M)
 {

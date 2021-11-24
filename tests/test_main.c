@@ -26,6 +26,11 @@ void test_ctor(void)
     BinaryMatrix *p = ConstructBinaryMatrix(2147483647, 2147483647);
     CU_ASSERT_PTR_NULL(p);
 
+    BinaryMatrix *medium_matrix = ConstructBinaryMatrix(100, 100);
+    CU_ASSERT_EQUAL(medium_matrix->num_cols, 100);
+    CU_ASSERT_EQUAL(medium_matrix->num_rows, 100);
+    PrintMatrix(medium_matrix);
+
     // Will fail if system memory is less than 800 megabytes.
     BinaryMatrix *large_matrix = ConstructBinaryMatrix(80000, 80000);
     CU_ASSERT_EQUAL(large_matrix->num_cols, 80000);
@@ -34,6 +39,7 @@ void test_ctor(void)
     {
         CU_ASSERT_EQUAL(large_matrix->data[i], 0);
     }
+
     DeleteBinaryMatrix(large_matrix);
 }
 
