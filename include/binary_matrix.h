@@ -17,6 +17,8 @@ typedef struct
 	int *data;
 } BinaryMatrix;
 
+static const BinaryMatrix BINARY_MATRIX_EMPTY = {0, 0, NULL};
+
 /**
  * Allocate a bit matrix in the least amount of storage.
  */
@@ -24,8 +26,13 @@ BinaryMatrix *ConstructBinaryMatrix(int num_rows, int num_cols);
 
 /**
  * Free the memory allocated to store the bit matrix.
+ * 
+ * Always returns NULL.
+ * 
+ * E.g. usage: n = DeleteBinaryMatrix(n);
+ * This free's n and sets n to NULL.
  */
-void DeleteBinaryMatrix(BinaryMatrix *M);
+BinaryMatrix *DeleteBinaryMatrix(BinaryMatrix *M);
 
 /**
  * Ensure the index of row,col is a matrix index.

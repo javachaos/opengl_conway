@@ -34,5 +34,5 @@ test: $(OBJ_TEST)
 
 clean:
 	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
-	rm -f $(OBJ_TEST)/*.o *~ core $(INCDIR)/*~
+	rm -f $(ODIR_TEST)/*.o *~ core $(INCDIR)/*~
 	rm -f test

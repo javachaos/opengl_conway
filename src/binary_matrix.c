@@ -27,10 +27,11 @@ BinaryMatrix *ConstructBinaryMatrix(int rows, int cols)
 	}
 }
 
-void DeleteBinaryMatrix(BinaryMatrix *M)
+BinaryMatrix *DeleteBinaryMatrix(BinaryMatrix *M)
 {
 	free(M->data);
 	free(M);
+	return NULL;
 }
 
 void UpdateEntry(BinaryMatrix *M, int row, int col, int c)
@@ -85,6 +86,10 @@ int CheckEntry(BinaryMatrix *M, int row, int col)
 
 void PrintMatrix(BinaryMatrix *M)
 {
+	if (M == NULL) {
+		return;
+	}
+
 	int i, j, k;
 	//Draw first line for this snapshot
 	for (k = 0; k < M->num_cols; k++)
