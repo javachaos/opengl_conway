@@ -12,7 +12,7 @@ void test_ctor(void)
     CU_ASSERT_EQUAL(matrix->data[0], 0);
     CU_ASSERT_EQUAL(matrix->data[1], 0);
     PrintMatrix(matrix);
-    DeleteBinaryMatrix(matrix);
+    matrix = DeleteBinaryMatrix(matrix);
     
     BinaryMatrix *m = ConstructBinaryMatrix(8, -8);
     CU_ASSERT_PTR_NULL(m);
@@ -36,7 +36,7 @@ void test_ctor(void)
     CU_ASSERT_EQUAL(medium_matrix->num_cols, 100);
     CU_ASSERT_EQUAL(medium_matrix->num_rows, 100);
     PrintMatrix(medium_matrix);
-    DeleteBinaryMatrix(medium_matrix);
+    medium_matrix = DeleteBinaryMatrix(medium_matrix);
 
     // Will fail if system memory is less than 800 megabytes.
     BinaryMatrix *large_matrix = ConstructBinaryMatrix(80000, 80000);
@@ -47,7 +47,7 @@ void test_ctor(void)
         CU_ASSERT_EQUAL(large_matrix->data[i], 0);
     }
 
-    DeleteBinaryMatrix(large_matrix);
+    large_matrix = DeleteBinaryMatrix(large_matrix);
 }
 
 void test_delete_matrix(void) {
