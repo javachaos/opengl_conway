@@ -65,6 +65,7 @@ int IsMatrixIndex(BinaryMatrix *M, int row, int col)
 	{
 		printf(
 			"IsMatrixIndex Error: NULL parameter passed.\n");
+		return 0;
 	}
 	else
 	{
